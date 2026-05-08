@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   
@@ -20,24 +23,24 @@
     <label for="bill">Bill</label>
     <div class="bill_input">
       <img class="bill_input-icon" src="images/icon-dollar.svg" alt="Dollar icon">
-      <input type="number" aria-label="Bill amount" id="bill" placeholder="0">
+      <input class="bill_input-field" type="number" aria-label="Bill amount" id="bill" placeholder="0">
     </div>
   </div>
   <div class="calculator__selector">
-    <label for="tip">Select Tip %</label>
+    <label class="calculator__select-tip" for="tip">Select Tip %</label>
     <div class="calculator__options">
       <button class="calculator__option" aria-label="5 percent tip" data-tip="5">5%</button>
       <button class="calculator__option" aria-label="10 percent tip" data-tip="10">10%</button>
       <button class="calculator__option" aria-label="15 percent tip" data-tip="15">15%</button>
       <button class="calculator__option" aria-label="25 percent tip" data-tip="25">25%</button>
       <button class="calculator__option" aria-label="50 percent tip" data-tip="50">50%</button>
-      <input type="number" aria-label="Custom tip percentage" id="custom-tip" placeholder="Custom">
+      <input class="calculator__option-input" type="number" aria-label="Custom tip percentage" id="custom-tip" placeholder="Custom">
     </div>
   </div>
   <div class="calculator__input">
     <label for="people">Number of People</label>
     <div class="number_people">
-    <input type="number" aria-label="Number of people sharing the bill" id="people" placeholder="0">
+    <input class="number_people-field" type="number" aria-label="Number of people sharing the bill" id="people" placeholder="0">
     <img class="number_people-icon" src="images/icon-person.svg" alt="Person icon">
     </div>
   </div>
