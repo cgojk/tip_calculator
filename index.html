@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  
+</head>
+<body>
+<header>
+ <img src="./images/logo.svg" alt="Tip calculator logo" class="logo">
+</header>
+ 
+<section class="calculator">
+  <div class="calculator__input">
+    <label for="bill">Bill</label>
+    <div class="bill_input">
+      <img class="bill_input-icon" src="images/icon-dollar.svg" alt="Dollar icon">
+      <input type="number" aria-label="Bill amount" id="bill" placeholder="0">
+    </div>
+  </div>
+  <div class="calculator__selector">
+    <label for="tip">Select Tip %</label>
+    <div class="calculator__options">
+      <button class="calculator__option" aria-label="5 percent tip" data-tip="5">5%</button>
+      <button class="calculator__option" aria-label="10 percent tip" data-tip="10">10%</button>
+      <button class="calculator__option" aria-label="15 percent tip" data-tip="15">15%</button>
+      <button class="calculator__option" aria-label="25 percent tip" data-tip="25">25%</button>
+      <button class="calculator__option" aria-label="50 percent tip" data-tip="50">50%</button>
+      <input type="number" aria-label="Custom tip percentage" id="custom-tip" placeholder="Custom">
+    </div>
+  </div>
+  <div class="calculator__input">
+    <label for="people">Number of People</label>
+    <div class="number_people">
+    <input type="number" aria-label="Number of people sharing the bill" id="people" placeholder="0">
+    <img class="number_people-icon" src="images/icon-person.svg" alt="Person icon">
+    </div>
+  </div>
+  <div class="calculator__results">
+    <div class="calculator__result">
+      <p class="calculator__result-label">Tip Amount <span>/ person</span></p>
+      <p class="calculator__result-value" id="tip-amount">$0.00</p>
+    </div>
+    <div class="calculator__result">
+      <p class="calculator__result-label">Total <span>/ person</span></p>
+      <p class="calculator__result-value" id="total-amount">$0.00</p>
+    </div>
+  </div>
+  <button class="calculator__reset" id="reset">Reset</button>
+</section>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Catalina G</a>.
+  </footer>
+</body>
+</html>
+
+

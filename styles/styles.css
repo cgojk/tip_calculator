@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+:root {
+  /* =========================
+     Colors
+  ========================= */
+
+
+
+  /* Primary */
+  --green-400: hsl(172, 67%, 45%);
+
+  /* Neutral */
+  --green-900: hsl(183, 100%, 15%);
+  --green-800:hsl(183, 85%,21%);
+  --green-750:hsl(183,79%,24%);
+  --green-400:hsl(172, 67%,45%);
+  --green-200:hsl(173,61%,77%);  
+  --grey-600:hsl(180,25%,32%);
+
+  --grey-550:hsl(180,18%,40%);
+
+  --grey-500: hsl(186, 14%, 43%);
+  --grey-400: hsl(184, 14%, 56%);
+  --grey-300: hsl(184, 19%, 68%);
+  --grey-200: hsl(185, 41%, 84%);
+  --grey-50: hsl(189, 47%, 97%);
+
+  --white: hsl(0, 100%, 100%);
+  --black:hsl(0, 0%, 0%);
+
+  --orange-400:hsl(13,70%,60%);
+
+  /* =========================
+     Typography
+  ========================= */
+
+ /* =========================
+     Font Family
+  ========================= */
+
+  --ff-space-mono: "Space Mono", monospace;
+
+  /* =========================
+     Font Weights
+  ========================= */
+
+  --fw-700: 700;
+
+  /* =========================
+     Fluid Font Sizes
+  ========================= */
+
+  --fs-900: clamp(2.5rem, 2.2rem + 1vw, 3rem);       
+  /* 40px → 48px */
+
+  --fs-800: clamp(1.75rem, 1.6rem + 0.8vw, 2rem);   
+  /* 28px → 32px */
+
+  --fs-700: clamp(1.3rem, 1.2rem + 0.5vw, 1.5rem);  
+  /* 21px → 24px */
+
+  --fs-600: clamp(1.1rem, 1rem + 0.4vw, 1.25rem);   
+  /* 18px → 20px */
+
+  --fs-500: clamp(0.95rem, 0.9rem + 0.3vw, 1rem);   
+  /* 15px → 16px */
+
+  --fs-400: clamp(0.75rem, 0.72rem + 0.2vw, 0.8125rem); 
+  /* 12px → 13px */
+
+  /* =========================
+     Font Presets
+  ========================= */
+
+  /* Font 1
+     48px / 71px
+     letter-spacing: -1px
+  */
+  --font-1:var(--fw-700) var(--fs-900) / 1.48 var(--ff-space-mono);
+
+  --ls-1: -0.0625rem;
+
+  /* Font 2
+     32px / 47px
+     letter-spacing: -0.67px
+  */
+  --font-2:var(--fw-700) var(--fs-800)/ 1.47 var(--ff-space-mono);
+
+  --ls-2: -0.0419rem;
+
+  /* Font 3
+     24px / 36px
+  */
+  --font-3:var(--fw-700) var(--fs-700)/ 1.5 var(--ff-space-mono);
+
+  --ls-3: 0;
+
+  /* Font 4
+     20px / 30px
+  */
+  --font-4:var(--fw-700)var(--fs-600)/ 1.5 var(--ff-space-mono);
+
+  --ls-4: 0;
+
+  /* Font 5
+     16px / 24px
+  */
+  --font-5:var(--fw-700) var(--fs-500)/ 1.5 var(--ff-space-mono);
+
+  --ls-5: 0;
+
+  /* Font 6
+     13px / 19px
+  */
+  --font-6:var(--fw-700) var(--fs-400)/ 1.46 var(--ff-space-mono);
+
+  --ls-6: 0;
+
+
+  /* spacing */
+  --spacing-0: 0px;
+--spacing-100: 8px;
+--spacing-200: 16px;
+--spacing-300: 24px;
+--spacing-400: 24px;
+--spacing-600: 48px;
+--spacing-1000: 80px;
+--spacing-1200: 96px;
+--spacing-1500: 120px;
+--spacing-1600: 128px;
+}
