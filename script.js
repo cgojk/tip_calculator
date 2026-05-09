@@ -1,5 +1,8 @@
 "use strict";
 
+
+
+
 const billInput = document.getElementById('bill');
 const tipOptions = document.querySelectorAll('.calculator__option');
 const numberPeopleInput = document.getElementById('people');
@@ -8,11 +11,36 @@ const calculatorResult = document.querySelector('.calculator__result');
 const calculatorResultTip = document.querySelector('.calculator__result-tip');
 const calculatorResultValue = document.querySelector('.calculator__result-value');
 const calculatorError = document.querySelector('.calculator__error');
+const peopleError = document.getElementById('people-error');
+const calculatorOptionInput= document.querySelector('.calculator__option-input');
+const clearAll = document.getElementById('clear-all');
 
-// const tipAmountResult = document.querySelector('.calculator__tip-amount');
-// const customTipInput = document.getElementById('calculator__option-input');
+
+
+
+clearAll.addEventListener('click', () => {
+  billInput.value = '';
+  numberPeopleInput.value = '';
+  calculatorOptionInput.value = '';
+  billInput.classList.remove('error');
+  calculatorError.classList.remove("color:red", "font: var(--font-6)");
+  numberPeopleInput.classList.remove('error');
+  peopleError.classList.remove("color:red", "font: var(--font-6)");
+  calculatorOptionInput.classList.remove('error');
+  tipOptions.forEach(button => button.classList.remove('active'));
+  isValid = true;
+});
+
+
+
+
+
+
+
+
 
 let optionsPercentage= 0;
+let isValid = true;
 
 tipOptions.forEach(button => {
   button.addEventListener('click', (e) => {
@@ -23,6 +51,12 @@ tipOptions.forEach(button => {
   });
 }); 
 
+calculatorOptionInput.addEventListener('input', (e) => {
+  const percentage = parseFloat(calculatorOptionInput.value.trim());
+  console.log(percentage);
+  optionsPercentage = percentage;
+  return optionsPercentage;
+});
 
 let billAmountValue = 0;
 
@@ -46,32 +80,66 @@ numberPeopleInput.addEventListener('input', (e) => {
 
 const handleCalculate = (e) => {
   e.preventDefault();
-  let isValid =true;
+  
 
 
 // trim values
 
+
+
 const billAmountValue = parseFloat(billInput.value.trim());
 console.log(billAmountValue);
+
 const numberOfPeople = parseInt(numberPeopleInput.value.trim());
 console.log(numberOfPeople);
+
 const OptionsPercentage = parseFloat(optionsPercentage);
 console.log(OptionsPercentage);
 
 
 
+
 // validate fields
-if (billAmountValue <= 0) {
+if (billAmountValue <= 0 || isNaN(billAmountValue)) {
+
   calculatorError.textContent = 'Please enter a valid bill amount';
-  isValid = false;
+  //  billInput.addclassList.add('error');
+  calculatorError.style.color = 'red';
+  calculatorError.style.fontSize = '14px';
+  billInput.classList.add('error');
+
+  console.log(billAmountValue);
+  (!isValid );
+  console.log(isValid);
 }
-if (numberOfPeople < 0 ) {
-  calculatorError.textContent = 'Please it cannot be 0';
-  isValid = false;
-}
-  if (isValid){
+ 
+if (numberOfPeople <= 0 || isNaN(numberOfPeople)) {
+  peopleError.textContent = 'Please enter a valid number of people';
+  peopleError.style.color = 'red';
+  peopleError.style.fontSize = '14px';
+  console.log(numberOfPeople);
+(!isValid);
+  console.log(isValid);
+
+}else if (isValid) {
+    
     calculation();
   };
+
+     
+// function AddInputListeners() {
+//   billInput.addEventListener('input', (e) => {
+//     calculatorError.classList.remove("color:red", "font: var(--font-6)");
+//      billInput.classList.remove('error');
+//   });
+
+//   numberPeopleInput.addEventListener('input', (e) => {
+//     peopleError.classList.remove("color:red", "font: var(--font-6)");
+//      numberPeopleInput.classList.remove('error');
+//   });
+
+  
+//   } 
 
   function calculation() {
   const resultTipAmoung = (billAmountValue * OptionsPercentage) / 100;
@@ -84,26 +152,47 @@ if (numberOfPeople < 0 ) {
 } 
 
 
+
+
+
   
     
   }
   const result = calculation();
   
   function displayResults(resultTipAmoung, resultTotal) {
+   
     calculatorResultTip.textContent = `$${resultTipAmoung.toFixed(2)}`;
     calculatorResultValue.textContent = `$${resultTotal.toFixed(2)}`;
-    calculatorResultReset.disabled = true;
+   
   }
 
    displayResults(result.resultTipAmoung, result.resultTotal);
+  //  calculatorResultReset.disabled = true;
+   
 
-  
 };
 
 // const Reset = document.getElementById('reset');
 calculatorResultReset.addEventListener('click', handleCalculate)
-     
 
+// AddInputListeners();
+     
+// function AddInputListeners() {
+//   billInput.addEventListener('input', (e) => {
+//     calculatorError.classList.remove("color:red", "font: var(--font-6)");
+//      billInput.classList.remove('error');
+//   });
+
+//   numberPeopleInput.addEventListener('input', (e) => {
+//     peopleError.classList.remove("color:red", "font: var(--font-6)");
+//      numberPeopleInput.classList.remove('error');
+//   });
+
+  
+//   }
+
+// funciton to clear the form 
 
 
 

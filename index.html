@@ -21,6 +21,7 @@
 <section class="calculator">
   <div class="calculator__input">
     <label class="calculator__label" for="bill">Bill</label>
+    <h2 class="calculator__clear" id="clear-all">Clear all</h2>
     <div class="bill_input">
       <img class="bill_input-icon" src="images/icon-dollar.svg" alt="Dollar icon">
       <input class="bill_input-field" type="number" aria-label="Bill amount" id="bill" placeholder="0">
@@ -36,7 +37,9 @@
       <button class="calculator__option" aria-label="25 percent tip" data-tip="25">25%</button>
       <button class="calculator__option" aria-label="50 percent tip" data-tip="50">50%</button>
       <input class="calculator__option-input" type="number" aria-label="Custom tip percentage" id="custom-tip" placeholder="Custom">
+
     </div>
+   
   </div>
   <div class="calculator__input">
     <label class="calculator__label" for="people">Number of People</label>
@@ -45,7 +48,9 @@
     <h2 class="calculator__error" id="people-error"></h2>
     <img class="number_people-icon" src="images/icon-person.svg" alt="Person icon">
     </div>
+    <h2 class="calculator__error-people" id="people-error"></h2>
   </div>
+   
   <div class="calculator__results">
     <div class="calculator__result">
       <p class="calculator__result-label">Tip Amount <span>/ person</span></p>
