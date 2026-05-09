@@ -20,10 +20,11 @@
  
 <section class="calculator">
   <div class="calculator__input">
-    <label for="bill">Bill</label>
+    <label class="calculator__label" for="bill">Bill</label>
     <div class="bill_input">
       <img class="bill_input-icon" src="images/icon-dollar.svg" alt="Dollar icon">
       <input class="bill_input-field" type="number" aria-label="Bill amount" id="bill" placeholder="0">
+      <h2 class="calculator__error" id="bill-error"></h2>
     </div>
   </div>
   <div class="calculator__selector">
@@ -38,16 +39,17 @@
     </div>
   </div>
   <div class="calculator__input">
-    <label for="people">Number of People</label>
+    <label class="calculator__label" for="people">Number of People</label>
     <div class="number_people">
     <input class="number_people-field" type="number" aria-label="Number of people sharing the bill" id="people" placeholder="0">
+    <h2 class="calculator__error" id="people-error"></h2>
     <img class="number_people-icon" src="images/icon-person.svg" alt="Person icon">
     </div>
   </div>
   <div class="calculator__results">
     <div class="calculator__result">
       <p class="calculator__result-label">Tip Amount <span>/ person</span></p>
-      <p class="calculator__result-value" id="tip-amount">$0.00</p>
+      <p class="calculator__result-tip" id="tip-amount">$0.00</p>
     </div>
     <div class="calculator__result">
       <p class="calculator__result-label">Total <span>/ person</span></p>
@@ -60,6 +62,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Catalina G</a>.
   </footer>
+  <script src="./script.js"></script>
 </body>
 </html>
 

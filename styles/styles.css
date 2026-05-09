@@ -175,6 +175,10 @@ body{
     flex-direction: column;
     gap: var(--spacing-200);
 }
+.bill_input-field:hover{
+    outline: 2px solid var(--green-400);
+}
+
 .calculator__input label{
     font: var(--font-5);
     color: var(--grey-500);
@@ -254,12 +258,37 @@ font: var(--font-3);
     font: var(--font-2);
     color: var(--green-400);
 }
+.calculator__result-tip{
+    font: var(--font-2);
+    color: var(--green-400);
+}
 .calculator__result-label{
     font: var(--font-5);
     color:white;
 }
 .calculator__reset{
-    background-color: var(--green-800);
+    background-color: var(--green-400);
+    color: var(--green-900);
+    font: var(--font-4);
+    width:100%;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-200) ;
+    border-radius: var(--radius-200);
+    text-transform: uppercase;
+    
+
+  
+  
+}
+.calculator__reset:hover{
+    background-color: var(--green-900);
+    color: var(--white);
+}
+.calculator__reset:disabled{
+   background-color: var(--green-800);
     color: var(--green-700);
     font: var(--font-4);
     width:100%;
@@ -270,6 +299,10 @@ font: var(--font-3);
     padding: var(--spacing-200) ;
     border-radius: var(--radius-200);
     text-transform: uppercase;
-  
-  
+    cursor: not-allowed;
+}
+.calculator__result-label span{
+    display: block;
+    font: var(--font-6);
+    color: var(--grey-400);
 }
