@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/queries.css">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Tip calculator app</title>
@@ -19,49 +20,53 @@
 </header>
  
 <section class="calculator">
-  <div class="calculator__input">
-    <label class="calculator__label" for="bill">Bill</label>
-    <h2 class="calculator__clear" id="clear-all">Clear all</h2>
-    <div class="bill_input">
-      <img class="bill_input-icon" src="images/icon-dollar.svg" alt="Dollar icon">
-      <input class="bill_input-field" type="number" aria-label="Bill amount" id="bill" placeholder="0">
-      <h2 class="calculator__error" id="bill-error"></h2>
-    </div>
-  </div>
-  <div class="calculator__selector">
-    <label class="calculator__select-tip" for="tip">Select Tip %</label>
-    <div class="calculator__options">
-      <button class="calculator__option" aria-label="5 percent tip" data-tip="5">5%</button>
-      <button class="calculator__option" aria-label="10 percent tip" data-tip="10">10%</button>
-      <button class="calculator__option" aria-label="15 percent tip" data-tip="15">15%</button>
-      <button class="calculator__option" aria-label="25 percent tip" data-tip="25">25%</button>
-      <button class="calculator__option" aria-label="50 percent tip" data-tip="50">50%</button>
-      <input class="calculator__option-input" type="number" aria-label="Custom tip percentage" id="custom-tip" placeholder="Custom">
+  <section class="calculator__info">
+    
+      <div class="calculator__input">
+        <label class="calculator__label" for="bill">Bill</label>
+        <h2 class="calculator__clear" id="clear-all">Clear all</h2>
+        <div class="bill_input">
+          <img class="bill_input-icon" src="images/icon-dollar.svg" alt="Dollar icon">
+          <input class="bill_input-field" type="number" aria-label="Bill amount" id="bill" placeholder="0">
+          <h2 class="calculator__error" id="bill-error"></h2>
+        </div>
+      </div>
+      <div class="calculator__selector">
+        <label class="calculator__select-tip" for="tip">Select Tip %</label>
+        <div class="calculator__options">
+          <button class="calculator__option" aria-label="5 percent tip" data-tip="5">5%</button>
+          <button class="calculator__option" aria-label="10 percent tip" data-tip="10">10%</button>
+          <button class="calculator__option" aria-label="15 percent tip" data-tip="15">15%</button>
+          <button class="calculator__option" aria-label="25 percent tip" data-tip="25">25%</button>
+          <button class="calculator__option" aria-label="50 percent tip" data-tip="50">50%</button>
+          <input class="calculator__option-input" type="number" aria-label="Custom tip percentage" id="custom-tip" placeholder="Custom">
 
-    </div>
-   
-  </div>
-  <div class="calculator__input">
-    <label class="calculator__label" for="people">Number of People</label>
-    <div class="number_people">
-    <input class="number_people-field" type="number" aria-label="Number of people sharing the bill" id="people" placeholder="0">
-    <h2 class="calculator__error" id="people-error"></h2>
-    <img class="number_people-icon" src="images/icon-person.svg" alt="Person icon">
-    </div>
-    <h2 class="calculator__error-people" id="people-error"></h2>
-  </div>
-   
-  <div class="calculator__results">
-    <div class="calculator__result">
-      <p class="calculator__result-label">Tip Amount <span>/ person</span></p>
-      <p class="calculator__result-tip" id="tip-amount">$0.00</p>
-    </div>
-    <div class="calculator__result">
-      <p class="calculator__result-label">Total <span>/ person</span></p>
-      <p class="calculator__result-value" id="total-amount">$0.00</p>
-    </div>
-  </div>
-  <button class="calculator__reset" id="reset">Reset</button>
+        </div>
+      
+      </div>
+      <div class="calculator__input">
+        <label class="calculator__label" for="people">Number of People</label>
+        <div class="number_people">
+        <input class="number_people-field" type="number" aria-label="Number of people sharing the bill" id="people" placeholder="0">
+        <h2 class="calculator__error" id="people-error"></h2>
+        <img class="number_people-icon" src="images/icon-person.svg" alt="Person icon">
+        </div>
+        <h2 class="calculator__error-people" id="people-error"></h2>
+      </div>
+  </section>
+   <section class="calculator__results">
+      <div class="calculator__results__container">
+        <div class="calculator__result">
+          <p class="calculator__result-label">Tip Amount <span>/ person</span></p>
+          <p class="calculator__result-tip" id="tip-amount">$0.00</p>
+        </div>
+        <div class="calculator__result">
+          <p class="calculator__result-label">Total <span>/ person</span></p>
+          <p class="calculator__result-value" id="total-amount">$0.00</p>
+        </div>
+      </div>
+      <button class="calculator__reset" id="reset">Reset</button>
+  </section>
 </section>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 

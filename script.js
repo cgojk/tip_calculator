@@ -26,16 +26,12 @@ clearAll.addEventListener('click', () => {
   calculatorError.classList.remove("color:red", "font: var(--font-6)");
   numberPeopleInput.classList.remove('error');
   peopleError.classList.remove("color:red", "font: var(--font-6)");
+  calculatorResultTip.textContent = '$0.00';
+  calculatorResultValue.textContent = '$0.00';
   calculatorOptionInput.classList.remove('error');
   tipOptions.forEach(button => button.classList.remove('active'));
   isValid = true;
 });
-
-
-
-
-
-
 
 
 

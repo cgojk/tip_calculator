@@ -255,11 +255,11 @@ font: var(--font-3);
 }
 
 .calculator__result-value{
-    font: var(--font-2);
+    font: var(--font-1);
     color: var(--green-400);
 }
 .calculator__result-tip{
-    font: var(--font-2);
+    font: var(--font-1);
     color: var(--green-400);
 }
 .calculator__result-label{
