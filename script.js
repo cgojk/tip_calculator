@@ -11,7 +11,7 @@ const calculatorResult = document.querySelector('.calculator__result');
 const calculatorResultTip = document.querySelector('.calculator__result-tip');
 const calculatorResultValue = document.querySelector('.calculator__result-value');
 const calculatorError = document.querySelector('.calculator__error');
-const peopleError = document.getElementById('people-error');
+const peopleError = document.querySelector('.calculator__error-people');
 const calculatorOptionInput= document.querySelector('.calculator__option-input');
 const clearAll = document.getElementById('clear-all');
 
@@ -23,9 +23,9 @@ clearAll.addEventListener('click', () => {
   numberPeopleInput.value = '';
   calculatorOptionInput.value = '';
   billInput.classList.remove('error');
-  calculatorError.classList.remove("color:red", "font: var(--font-6)");
+  calculatorError.classList.remove("color:red", "font:var(--font-6)");
   numberPeopleInput.classList.remove('error');
-  peopleError.classList.remove("color:red", "font: var(--font-6)");
+  peopleError.classList.remove("color:red", "font:var(--font-6)");
   calculatorResultTip.textContent = '$0.00';
   calculatorResultValue.textContent = '$0.00';
   calculatorOptionInput.classList.remove('error');
@@ -97,31 +97,33 @@ console.log(OptionsPercentage);
 
 // validate fields
 if (billAmountValue <= 0 || isNaN(billAmountValue)) {
-
   calculatorError.textContent = 'Please enter a valid bill amount';
-  //  billInput.addclassList.add('error');
   calculatorError.style.color = 'red';
   calculatorError.style.fontSize = '14px';
   billInput.classList.add('error');
 
   console.log(billAmountValue);
-  (!isValid );
+  (isValid = false);
   console.log(isValid);
 }
  
-if (numberOfPeople <= 0 || isNaN(numberOfPeople)) {
-  peopleError.textContent = 'Please enter a valid number of people';
-  peopleError.style.color = 'red';
-  peopleError.style.fontSize = '14px';
+ if (numberOfPeople < 0 || isNaN(numberOfPeople)) {
+  // peopleError.textContent = 'Please enter a valid number of people';
+  // peopleError.style.color = 'red';
+  // peopleError.style.fontSize = '14px';
+  numberPeopleInput.classList.add('error');
+  // peopleError.textContent = 'Please enter a valid number of people';
+  // peopleError.style.color = 'red';
+  // peopleError.style.fontSize = '14px';
   console.log(numberOfPeople);
-(!isValid);
+  (isValid = false);
   console.log(isValid);
 
-}else if (isValid) {
+}else if (isValid= true){ {
     
     calculation();
   };
-
+}
      
 // function AddInputListeners() {
 //   billInput.addEventListener('input', (e) => {
@@ -146,9 +148,6 @@ if (numberOfPeople <= 0 || isNaN(numberOfPeople)) {
 
     
 } 
-
-
-
 
 
   

@@ -14,11 +14,14 @@
 .calculator{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-300);
+    gap: var(--spacing-600);
+    padding: var(--spacing-1000) var(--spacing-600) var(--spacing-1000) var(--spacing-600);
 }
  .calculator__results{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: var(--spacing-600);
+  
    
     gap:var(--spacing-300);
 } 

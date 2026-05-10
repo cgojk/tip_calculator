@@ -179,18 +179,38 @@ body{
     outline: 2px solid var(--green-400);
 }
 
-.calculator__input label{
+.calculator__input label,
+.title_clearBtn h2{
     font: var(--font-5);
-    color: var(--grey-500);
+   
    
 }
+/* title and clear button styles */
+.title_clearBtn h2{
+    color: var(--orange-400);
+}
+.title_clearBtn h2{
+    cursor: pointer;
+}
+.title_clearBtn h2:active{
+    color: var(--green-900);
+}
+.title_clearBtn{
+    display: flex;
+        justify-content: space-between;
+      
+}
+.title_clearBtn h2:hover{
+    color: var(--green-400);
 
+}
+/* inputs styles */
 
 .bill_input .bill_input-icon,
 .number_people .number_people-icon{
     position:absolute;
     left: var(--spacing-200);
-    top: 70%;
+    top: 55%;
     transform: translateY(-50%);
 }
 .bill_input-field, .number_people-field{
@@ -203,8 +223,19 @@ text-align: right;
 font: var(--font-3);
 }
 
+/* options tips percentage styles */
 
+/* styling the typogrpahy */
 
+.calculator__select-tip{
+    font: var(--font-5);
+    color: var(--grey-500);
+   
+}
+.calculator__selector,
+.calculator__input{
+    margin-top:var(--spacing-400);
+}
 .calculator__options{
     display: grid;
     margin-top: var(--spacing-200);
@@ -228,15 +259,22 @@ font: var(--font-3);
 }
 .calculator__option-input{
     background-color: var(--grey-50);
+    font: var(--font-4);
+
     border: none;
     border-radius: var(--radius-200);
     padding: var(--spacing-200) var(--spacing-300);
     width: 100%;
     text-align: center;
 }
-.calculator__option:hover{
+.calculator__option:hover,.calculator__option:active, 
+.calculator__option:focus, .calculator__option-input:focus,
+ .calculator__option-input:hover{
     background-color: var(--green-400);
 }
+
+/* results styles */
+
 .calculator__results{
     background-color: var(--green-900);
     border-radius: var(--radius-300);
@@ -255,11 +293,11 @@ font: var(--font-3);
 }
 
 .calculator__result-value{
-    font: var(--font-1);
+    font: var(--font-2);
     color: var(--green-400);
 }
 .calculator__result-tip{
-    font: var(--font-1);
+    font: var(--font-2);
     color: var(--green-400);
 }
 .calculator__result-label{
@@ -286,6 +324,7 @@ font: var(--font-3);
 .calculator__reset:hover{
     background-color: var(--green-900);
     color: var(--white);
+    border: 2px solid var(--green-400);
 }
 .calculator__reset:disabled{
    background-color: var(--green-800);
@@ -311,5 +350,21 @@ font: var(--font-3);
 .error{
     color: var(--orange-400);
    border: 2px solid var(--orange-400);
+  
+   
+  
 }
+.error__description{
+    color: var(--orange-400);
+    font-size: 14px;
+    display: block;
+    margin-top: var(--spacing-100);
+}
+.wrapper__title-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 

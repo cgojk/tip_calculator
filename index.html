@@ -23,8 +23,10 @@
   <section class="calculator__info">
     
       <div class="calculator__input">
-        <label class="calculator__label" for="bill">Bill</label>
-        <h2 class="calculator__clear" id="clear-all">Clear all</h2>
+        <div class="title_clearBtn">
+           <label class="calculator__label" for="bill">Bill</label>
+          <h2 class="calculator__clear" id="clear-all">Clear all</h2>
+        </div>
         <div class="bill_input">
           <img class="bill_input-icon" src="images/icon-dollar.svg" alt="Dollar icon">
           <input class="bill_input-field" type="number" aria-label="Bill amount" id="bill" placeholder="0">
@@ -45,7 +47,12 @@
       
       </div>
       <div class="calculator__input">
-        <label class="calculator__label" for="people">Number of People</label>
+
+         <div class="wrapper__title-label">
+           
+           <label class="calculator__label" for="people">Number of People</label>
+            <h2 class="error__description">Can't be zero</h2>
+          </div>
         <div class="number_people">
         <input class="number_people-field" type="number" aria-label="Number of people sharing the bill" id="people" placeholder="0">
         <h2 class="calculator__error" id="people-error"></h2>
