@@ -210,7 +210,7 @@ body{
 .number_people .number_people-icon{
     position:absolute;
     left: var(--spacing-200);
-    top: 55%;
+    top: 65%;
     transform: translateY(-50%);
 }
 .bill_input-field, .number_people-field{
@@ -222,7 +222,12 @@ width: 100%;
 text-align: right;
 font: var(--font-3);
 }
-
+.bill_input-field:focus, .number_people-field:focus{
+    outline: 2px solid var(--green-400);
+}
+.number_people-field:focus{
+    outline: 2px solid var(--green-400);
+}
 /* options tips percentage styles */
 
 /* styling the typogrpahy */
@@ -316,6 +321,7 @@ font: var(--font-3);
     padding: var(--spacing-200) ;
     border-radius: var(--radius-200);
     text-transform: uppercase;
+    cursor: pointer;
     
 
   
