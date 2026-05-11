@@ -81,7 +81,7 @@ calculatorOptionInput.addEventListener('input', (e) => {
 
 
 numberPeopleInput.addEventListener('input', (e) => {
-  numberOfPeople = parseInt(numberPeopleInput.value.trim()) || 0;
+  numberOfPeople = parseInt(numberPeopleInput.value.trim()) ;
   peopleError.textContent = '';
   numberPeopleInput.classList.remove('error');
   console.log(numberOfPeople);
@@ -124,7 +124,7 @@ isValid = false;
  
 }
  
- if (numberOfPeople <0 ) {
+ if (numberOfPeople <=0 ) {
     isValid = false;
    peopleError.textContent = 'Please enter a valid number of people';
   peopleError.style.color = 'red';
@@ -136,7 +136,7 @@ isValid = false;
   console.log(isValid);
 
 
-}else if (billAmountValue > 0 && numberOfPeople >= 0 && optionsPercentage >= 0){ 
+}else if (billAmountValue > 0 && numberOfPeople > 0 && optionsPercentage >= 0){ 
   
   isValid = true 
     calculation();
