@@ -278,6 +278,12 @@ font: var(--font-3);
     background-color: var(--green-400);
 }
 
+.calculator__option.active {
+  background-color: hsl(172, 67%, 45%);
+  color: white;
+  border: 2px solid white;
+}
+
 /* results styles */
 
 .calculator__results{

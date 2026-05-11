@@ -40,6 +40,13 @@ let isValid = true;
 
 tipOptions.forEach(button => {
   button.addEventListener('click', (e) => {
+
+    // remove active from all buttons
+    tipOptions.forEach(btn => btn.classList.remove('active'));
+
+    // add active to clicked button
+    e.target.classList.add('active');
+
     const percentage = parseFloat(e.target.getAttribute('data-tip'));
     console.log(percentage);
     optionsPercentage = percentage;
