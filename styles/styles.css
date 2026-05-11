@@ -297,6 +297,7 @@ font: var(--font-3);
     gap: var(--spacing-300);
     color: var(--white);
 }
+
 .calculator__result{
     display: flex;
     align-items: center;
@@ -333,6 +334,7 @@ font: var(--font-3);
   
   
 }
+
 .calculator__reset:hover{
     background-color: var(--green-900);
     color: var(--white);
