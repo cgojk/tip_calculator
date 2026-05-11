@@ -18,8 +18,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL:https://github.com/cgojk/tip_calculator.git
+- Live Site URL:https://luminous-manatee-6b4449.netlify.app/
 
 ### Built with
 
@@ -32,12 +32,13 @@ Users should be able to:
 
 ### What I learned
 
-Improved my JavaScript understanding and overall language usage, although there’s still a lot to improve.
-I realized there are cleaner and more efficient ways to solve problems in JavaScript.
+Anothe project that allows me to Improve my JavaScript/CSS language usage, although there’s still a lot to improve.
+I realised there are cleaner and more efficient ways to solve problems in JavaScript.
 I need to work more on writing DRY (Don’t Repeat Yourself) code because I tend to overthink solutions and repeat logic unnecessarily.
 Sometimes I create more code than needed, but I think that improves naturally with practice and experience.
 One important thing for me right now is making sure the code still makes sense to me and that I understand what I’m writing.
-I also learned more about:
+
+With this project I learned more about:
 validation
 event listeners
 variable scope
@@ -48,5 +49,3 @@ improving user experience by clearing errors dynamically
 ## Author
 
 Catalina G.
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
